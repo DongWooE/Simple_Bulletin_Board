@@ -13,7 +13,7 @@ const getBoards = async(req,res,next)=>{
 const postBoard = async(req,res,next)=>{
     const {body} = req;
     try {
-        const board = await new Board(body);
+        const board = await Board.create(body);
         res.json(board);
     } catch (error) {
         console.error(error);
