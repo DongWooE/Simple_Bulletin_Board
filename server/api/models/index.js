@@ -25,7 +25,8 @@ readdirSync(join(__dirname, 'schemas'))
   .filter(file => /\.schema\.js/.test(file))
   .forEach(file => {
       const schema = require(join(__dirname, 'schemas', file));
-      models[file] = mongoose.model(file, schema, file);  
+      const fileName = file.replace(/\.schema\.js/, '');
+      models[fileName] = mongoose.model(fileName, schema);  
   });
 
 module.exports = models;

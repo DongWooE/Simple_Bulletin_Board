@@ -1,8 +1,8 @@
 const {Router} = require('express');
 const router = Router();
+const controller = require('./controller');
 
-router.get('/', async(async,res,next) =>{
-    res.send('hihi');
-})
+router.get('/', controller.getBoards);
+router.post('/', controller.postBoard);
 
 module.exports = router;
