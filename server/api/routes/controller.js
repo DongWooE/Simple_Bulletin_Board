@@ -3,7 +3,7 @@ const {Board} = require('../models');
 const getBoards = async(req,res,next)=>{
     try {
         const boards = await Board.find({});
-        res.json(boards);        
+        res.json({data:boards});        
     } catch (error) {
         console.error(error);
         next(error);
