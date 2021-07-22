@@ -1,0 +1,18 @@
+version: "3.3"
+services:
+    node-test:
+        build: .
+        ports:
+            - "3001:3001"
+        networks: 
+            - compose-networks
+    
+    mongodb:
+        image: "mongo"
+        ports:
+            - "27017:27017"
+        networks:
+            - compose-networks
+        
+networks:
+    compose-networks:
