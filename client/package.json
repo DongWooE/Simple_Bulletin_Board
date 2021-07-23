@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev:web": "ng serve web --port 4200",
-    "build:web": "ng build --prod",
+    "build:web": "ng build",
     "test": "ng test",
     "lint": "ng lint"
   },
